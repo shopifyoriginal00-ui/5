@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMNIOS LUXURY™ | World's Most Exclusive AI Platform | $1 Million Membership</title>
+    <meta name="description" content="Join the ultra-elite. Limited to 100 members worldwide. Access to 1000+ AI tools, private jets, yacht, and quantum computing. Starting at $9,999/month.">
+    <meta name="keywords" content="luxury AI, exclusive platform, millionaire tools, billionaire network, quantum computing, private jet">
+    <meta property="og:title" content="OMNIOS LUXURY™ - By Invitation Only">
+    <meta property="og:description" content="The $100 Trillion AI Platform for Ultra High Net Worth Individuals">
+    <meta property="og:image" content="https://omnios.luxury/preview.jpg">
+    
+    <!-- Google Fonts for Luxury Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- PayPal Luxury SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&currency=USD&vault=true&intent=subscription"></script>
+    
+    <!-- Stripe Premium -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <!-- Razorpay Premium -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <style>
+        :root {
+            --royal-gold: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+            --platinum: linear-gradient(135deg, #E5E4E2, #BCC6CC, #E5E4E2);
+            --diamond: linear-gradient(135deg, #B9F2FF, #FFFFFF, #B9F2FF);
+            --midnight: #0a0a0a;
+            --ivory: #FFFFF0;
+            --champagne: #F7E7CE;
+            --rose-gold: #B76E79;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        ::selection {
+            background: gold;
+            color: var(--midnight);
+        }
+        
+        body {
+            background: var(--midnight);
+            color: var(--ivory);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Luxury Animated Background */
+        .luxury-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 100%);
+        }
+        
+        .golden-particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: gold;
+            border-radius: 50%;
+            animation: float-particle 20s infinite linear;
+            box-shadow: 0 0 10px gold;
+        }
+        
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Premium Header */
+        .luxury-header {
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid gold;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .luxury-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 4px;
+            position: relative;
+        }
+        
+        .luxury-logo::after {
+            content: '™';
+            font-size: 0.8rem;
+            position: absolute;
+            top: 0;
+            right: -15px;
+        }
+        
+        .luxury-nav {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .luxury-nav a {
+            color: var(--ivory);
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .luxury-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: gold;
+            transition: width 0.3s;
+        }
+        
+        .luxury-nav a:hover::after {
+            width: 100%;
+        }
+        
+        .vip-login-btn {
+            background: var(--royal-gold);
+            color: var(--midnight);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        
+        .vip-login-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+        
+        /* Hero Section */
+        .luxury-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 50px 100px;
+            position: relative;
+            background: radial-gradient(ellipse at center, rgba(255,215,0,0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 1200px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .exclusive-label {
+            display: inline-block;
+            background: var(--diamond);
+            color: var(--midnight);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        
+        .luxury-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        
+        .luxury-subtitle {
+            font-size: 1.3rem;
+            font-weight: 200;
+            color: var(--champagne);
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+            line-height: 1.6;
+        }
+        
+        .luxury-cta-group {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .luxury-cta {
+            padding: 18px 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .luxury-cta-primary {
+            background: var(--royal-gold);
+            color: var(--midnight);
+        }
+        
+        .luxury-cta-secondary {
+            background: transparent;
+            color: gold;
+            border: 2px solid gold;
+        }
+        
+        .luxury-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+        
+        /* Membership Tiers */
+        .membership-section {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, transparent 0%, rgba(255,215,0,0.05) 50%, transparent 100%);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--champagne);
+            font-weight: 200;
+            letter-spacing: 1px;
+        }
+        
+        .tiers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .tier-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 20px;
+            padding: 50px 40px;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        
+        .tier-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+        
+        .tier-card.diamond::before {
+            background: var(--diamond);
+        }
+        
+        .tier-card.platinum::before {
+            background: var(--platinum);
+        }
+        
+        .tier-card.gold::before {
+            background: var(--royal-gold);
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(255, 215, 0, 0.2);
+            border-color: gold;
+        }
+        
+        .tier-badge {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .tier-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .tier-card.diamond .tier-name {
+            background: var(--diamond);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tier-card.platinum .tier-name {
+            background: var(--platinum);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tier-card.gold .tier-name {
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tier-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 20px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .tier-period {
+            font-size: 1rem;
+            color: var(--champagne);
+            margin-bottom: 40px;
+        }
+        
+        .tier-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        
+        .tier-features li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .tier-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-icon {
+            color: gold;
+            font-size: 1.2rem;
+        }
+        
+        .tier-cta {
+            width: 100%;
+            padding: 18px;
+            background: var(--royal-gold);
+            color: var(--midnight);
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .tier-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+        }
+        
+        /* Premium Features Grid */
+        .features-section {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,215,0,0.1);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 60%);
+            animation: rotate-glow 15s linear infinite;
+        }
+        
+        @keyframes rotate-glow {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.05);
+            border-color: gold;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--ivory);
+        }
+        
+        .feature-description {
+            color: var(--champagne);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        /* VIP Services */
+        .vip-services {
+            padding: 100px 50px;
+            background: radial-gradient(ellipse at center, rgba(255,215,0,0.05) 0%, transparent 70%);
+        }
+        
+        .vip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 80px auto 0;
+        }
+        
+        .vip-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.5s;
+        }
+        
+        .vip-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: var(--royal-gold);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        
+        .vip-card:hover::before {
+            opacity: 1;
+        }
+        
+        .vip-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .vip-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .vip-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: gold;
+        }
+        
+        .vip-desc {
+            color: var(--champagne);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        
+        /* AI Products Showcase */
+        .products-showcase {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.5) 100%);
+        }
+        
+        .products-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 80px auto 0;
+        }
+        
+        .product-card {
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, transparent 70%);
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: gold;
+            box-shadow: 0 30px 60px rgba(255, 215, 0, 0.3);
+        }
+        
+        .product-premium-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+        }
+        
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .product-desc {
+            color: var(--champagne);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .product-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: gold;
+            margin-bottom: 20px;
+        }
+        
+        .product-cta {
+            padding: 15px 40px;
+            background: var(--royal-gold);
+            color: var(--midnight);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .product-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+        }
+        
+        /* Payment Section */
+        .payment-section {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, rgba(255,215,0,0.02) 0%, rgba(0,0,0,0.8) 100%);
+        }
+        
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 80px auto 0;
+        }
+        
+        .payment-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+            border: 2px solid rgba(255,215,0,0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payment-card.active {
+            border-color: gold;
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        }
+        
+        .payment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+            border-color: gold;
+        }
+        
+        .payment-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: gold;
+        }
+        
+        .payment-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--ivory);
+        }
+        
+        .payment-desc {
+            color: var(--champagne);
+            font-weight: 300;
+        }
+        
+        /* Payment Details */
+        .payment-details {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px auto 0;
+            max-width: 800px;
+            display: none;
+        }
+        
+        .payment-details.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 50px;
+            background: radial-gradient(ellipse at center, rgba(255,215,0,0.05) 0%, transparent 70%);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 80px auto 0;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,215,0,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.8;
+            color: var(--champagne);
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--royal-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--midnight);
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: gold;
+            margin-bottom: 5px;
+        }
+        
+        .author-title {
+            font-size: 0.9rem;
+            color: var(--champagne);
+            font-weight: 300;
+        }
+        
+        .testimonial-stars {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: gold;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        .luxury-footer {
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, #000000 100%);
+            border-top: 1px solid rgba(255,215,0,0.2);
+            padding: 80px 50px 40px;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: gold;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: var(--champagne);
+            text-decoration: none;
+            line-height: 2;
+            font-weight: 300;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: gold;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,215,0,0.1);
+            color: var(--champagne);
+            font-weight: 200;
+            letter-spacing: 1px;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        
+        /* Google AdSense Premium Containers */
+        .adsense-luxury {
+            background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,215,0,0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 60px auto;
+            max-width: 970px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .adsense-luxury::before {
+            content: 'ADVERTISEMENT';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.7rem;
+            color: rgba(255,215,0,0.3);
+            letter-spacing: 2px;
+        }
+        
+        /* Modal */
+        .luxury-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);
+            border: 2px solid gold;
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 600px;
+            width: 90%;
+            z-index: 10000;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+        }
+        
+        .luxury-modal.active {
+            display: block;
+            animation: modalSlide 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes modalSlide {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+        
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+        }
+        
+        .modal-overlay.active {
+            display: block;
+        }
+        
+        /* Success Message */
+        .success-notification {
+            position: fixed;
+            top: 100px;
+            right: -400px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4);
+            z-index: 10001;
+            transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .success-notification.show {
+            right: 30px;
+        }
+        
+        /* Countdown Timer */
+        .countdown-banner {
+            background: linear-gradient(90deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+            animation: urgency 2s ease-in-out infinite;
+        }
+        
+        @keyframes urgency {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        /* Responsive Luxury */
+        @media (max-width: 1024px) {
+            .luxury-title {
+                font-size: 3.5rem;
+            }
+            
+            .tiers-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .luxury-nav {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .luxury-title {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+            
+            .tier-price {
+                font-size: 2.5rem;
+            }
+            
+            .products-slider {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Loading Animation */
+        .luxury-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--midnight);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.5s;
+        }
+        
+        .luxury-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader-content {
+            text-align: center;
+        }
+        
+        .loader-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            background: var(--royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .loader-bar {
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .loader-progress {
+            width: 0%;
+            height: 100%;
+            background: var(--royal-gold);
+            animation: load 2s ease-in-out forwards;
+        }
+        
+        @keyframes load {
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Luxury Loader -->
+    <div class="luxury-loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">OMNIOS</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Background Effects -->
+    <div class="luxury-bg"></div>
+    <div class="golden-particles" id="particles"></div>
+    
+    <!-- Premium Header -->
+    <header class="luxury-header">
+        <div class="header-content">
+            <div class="luxury-logo">OMNIOS LUXURY</div>
+            <nav class="luxury-nav">
+                <a href="#membership">Membership</a>
+                <a href="#services">Services</a>
+                <a href="#products">Products</a>
+                <a href="#testimonials">Elite Members</a>
+            </nav>
+            <button class="vip-login-btn">VIP Login</button>
+        </div>
+    </header>
+    
+    <!-- Countdown Banner -->
+    <div class="countdown-banner">
+        ⚠️ EXCLUSIVE OFFER: Only <span id="spots">3</span> Diamond Memberships Available | Ends in <span id="timer">47:59:59</span>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="luxury-hero">
+        <div class="hero-content">
+            <div class="exclusive-label">Limited to 100 Members Worldwide</div>
+            <h1 class="luxury-title">The Pinnacle of AI Excellence</h1>
+            <p class="luxury-subtitle">
+                Where artificial intelligence meets unparalleled luxury.<br>
+                Your gateway to infinite possibilities and exponential wealth.
+            </p>
+            <div class="luxury-cta-group">
+                <button class="luxury-cta luxury-cta-primary" onclick="scrollToMembership()">
+                    Apply for Membership
+                </button>
+                <button class="luxury-cta luxury-cta-secondary" onclick="showExclusiveDemo()">
+                    Request Private Demo
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Google AdSense Luxury Container 1 -->
+    <div class="adsense-luxury">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    
+    <!-- Membership Tiers Section -->
+    <section class="membership-section" id="membership">
+        <div class="section-header">
+            <h2 class="section-title">Exclusive Membership Tiers</h2>
+            <p class="section-subtitle">Choose your path to unlimited prosperity</p>
+        </div>
+        
+        <div class="tiers-container">
+            <!-- Diamond Tier -->
+            <div class="tier-card diamond">
+                <div class="tier-badge">💎</div>
+                <h3 class="tier-name">Diamond Infinity</h3>
+                <div class="tier-price">$999,999</div>
+                <div class="tier-period">Lifetime Access</div>
+                <ul class="tier-features">
+                    <li><span class="feature-icon">✓</span> Unlimited AI Tools (1000+)</li>
+                    <li><span class="feature-icon">✓</span> Quantum Computing Access</li>
+                    <li><span class="feature-icon">✓</span> Personal AI CEO Assistant</li>
+                    <li><span class="feature-icon">✓</span> Private Jet Access (50 hours/year)</li>
+                    <li><span class="feature-icon">✓</span> Yacht Club Membership</li>
+                    <li><span class="feature-icon">✓</span> Space Travel Priority Booking</li>
+                    <li><span class="feature-icon">✓</span> $100M Investment Fund Access</li>
+                    <li><span class="feature-icon">✓</span> Immortality Research Program</li>
+                    <li><span class="feature-icon">✓</span> Time Machine Beta Access</li>
+                    <li><span class="feature-icon">✓</span> Reality Manipulation Tools</li>
+                    <li><span class="feature-icon">✓</span> 24/7 Concierge Team</li>
+                    <li><span class="feature-icon">✓</span> Annual Billionaire Summit</li>
+                </ul>
+                <button class="tier-cta" onclick="selectMembership('diamond', 999999)">
+                    Claim Diamond Status
+                </button>
+            </div>
+            
+            <!-- Platinum Tier -->
+            <div class="tier-card platinum">
+                <div class="tier-badge">🔘</div>
+                <h3 class="tier-name">Platinum Elite</h3>
+                <div class="tier-price">$99,999</div>
+                <div class="tier-period">Per Year</div>
+                <ul class="tier-features">
+                    <li><span class="feature-icon">✓</span> 500 Premium AI Tools</li>
+                    <li><span class="feature-icon">✓</span> Dedicated AI Assistant</li>
+                    <li><span class="feature-icon">✓</span> Wealth Management AI</li>
+                    <li><span class="feature-icon">✓</span> Private Jet Access (20 hours/year)</li>
+                    <li><span class="feature-icon">✓</span> Luxury Car Service</li>
+                    <li><span class="feature-icon">✓</span> $10M Investment Opportunities</li>
+                    <li><span class="feature-icon">✓</span> Celebrity Network Access</li>
+                    <li><span class="feature-icon">✓</span> Metaverse Real Estate</li>
+                    <li><span class="feature-icon">✓</span> NFT Collection Access</li>
+                    <li><span class="feature-icon">✓</span> 24/7 Priority Support</li>
+                </ul>
+                <button class="tier-cta" onclick="selectMembership('platinum', 99999)">
+                    Join Platinum Elite
+                </button>
+            </div>
+            
+            <!-- Gold Tier -->
+            <div class="tier-card gold">
+                <div class="tier-badge">🥇</div>
+                <h3 class="tier-name">Gold Premier</h3>
+                <div class="tier-price">$9,999</div>
+                <div class="tier-period">Per Month</div>
+                <ul class="tier-features">
+                    <li><span class="feature-icon">✓</span> 100 Core AI Tools</li>
+                    <li><span class="feature-icon">✓</span> AI Business Consultant</li>
+                    <li><span class="feature-icon">✓</span> $1M Revenue Guarantee</li>
+                    <li><span class="feature-icon">✓</span> Luxury Hotel Access</li>
+                    <li><span class="feature-icon">✓</span> First-Class Flight Upgrades</li>
+                    <li><span class="feature-icon">✓</span> VIP Event Invitations</li>
+                    <li><span class="feature-icon">✓</span> Investment Masterclasses</li>
+                    <li><span class="feature-icon">✓</span> White Label Rights</li>
+                    <li><span class="feature-icon">✓</span> API Unlimited Access</li>
+                    <li><span class="feature-icon">✓</span> Premium Support</li>
+                </ul>
+                <button class="tier-cta" onclick="selectMembership('gold', 9999)">
+                    Activate Gold Status
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Premium Features -->
+    <section class="features-section">
+        <div class="section-header">
+            <h2 class="section-title">Ultra-Premium Features</h2>
+            <p class="section-subtitle">Technology beyond imagination</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3 class="feature-title">Quantum AI Brain</h3>
+                <p class="feature-description">
+                    Access quantum computing power for instant solutions to any problem. 
+                    Process infinite possibilities simultaneously.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title">Wealth Multiplier X1000</h3>
+                <p class="feature-description">
+                    AI-driven wealth generation system guaranteed to multiply your net worth by 1000x within 12 months.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⏰</div>
+                <h3 class="feature-title">Time Manipulation</h3>
+                <p class="feature-description">
+                    Exclusive access to time dilation technology. Experience 48 hours in every 24-hour day.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Space Commerce</h3>
+                <p class="feature-description">
+                    Priority access to asteroid mining profits and lunar real estate investments.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🧬</div>
+                <h3 class="feature-title">Genetic Optimization</h3>
+                <p class="feature-description">
+                    AI-designed genetic enhancements for longevity, intelligence, and peak performance.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3 class="feature-title">Global Influence Network</h3>
+                <p class="feature-description">
+                    Direct access to world leaders, tech titans, and royal families worldwide.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Google AdSense Luxury Container 2 -->
+    <div class="adsense-luxury">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+             data-ad-slot="2345678901"></ins>
+    </div>
+    
+    <!-- VIP Services -->
+    <section class="vip-services" id="services">
+        <div class="section-header">
+            <h2 class="section-title">VIP Concierge Services</h2>
+            <p class="section-subtitle">Your wish is our command</p>
+        </div>
+        
+        <div class="vip-grid">
+            <div class="vip-card">
+                <div class="vip-icon">🚁</div>
+                <h3 class="vip-title">Private Aviation</h3>
+                <p class="vip-desc">
+                    Instant access to private jets, helicopters, and spacecraft for interplanetary travel.
+                </p>
+            </div>
+            
+            <div class="vip-card">
+                <div class="vip-icon">🏝️</div>
+                <h3 class="vip-title">Private Islands</h3>
+                <p class="vip-desc">
+                    Exclusive access to private island rentals and purchases with AI-managed ecosystems.
+                </p>
+            </div>
+            
+            <div class="vip-card">
+                <div class="vip-icon">💎</div>
+                <h3 class="vip-title">Rare Asset Acquisition</h3>
+                <p class="vip-desc">
+                    AI-powered acquisition of rare art, vintage wines, and priceless artifacts.
+                </p>
+            </div>
+            
+            <div class="vip-card">
+                <div class="vip-icon">🛡️</div>
+                <h3 class="vip-title">Security & Privacy</h3>
+                <p class="vip-desc">
+                    Military-grade security, quantum encryption, and complete digital invisibility.
+                </p>
+            </div>
+            
+            <div class="vip-card">
+                <div class="vip-icon">🎭</div>
+                <h3 class="vip-title">Celebrity Access</h3>
+                <p class="vip-desc">
+                    Meet and network with A-list celebrities, sports icons, and cultural legends.
+                </p>
+            </div>
+            
+            <div class="vip-card">
+                <div class="vip-icon">🏰</div>
+                <h3 class="vip-title">Royal Privileges</h3>
+                <p class="vip-desc">
+                    Invitations to royal events, palace stays, and aristocratic gatherings.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Products Showcase -->
+    <section class="products-showcase" id="products">
+        <div class="section-header">
+            <h2 class="section-title">Revolutionary AI Products</h2>
+            <p class="section-subtitle">1000+ tools that redefine possibility</p>
+        </div>
+        
+        <div class="products-slider">
+            <div class="product-card">
+                <div class="product-premium-icon">💀</div>
+                <h3 class="product-name">Immortality Engine</h3>
+                <p class="product-desc">
+                    Achieve biological immortality through AI-designed cellular regeneration protocols.
+                </p>
+                <div class="product-price">$500,000</div>
+                <button class="product-cta" onclick="accessProduct('immortality')">
+                    Unlock Immortality
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-premium-icon">💰</div>
+                <h3 class="product-name">Trillion Dollar AI</h3>
+                <p class="product-desc">
+                    Guaranteed path to trillion-dollar wealth through quantum financial modeling.
+                </p>
+                <div class="product-price">$1,000,000</div>
+                <button class="product-cta" onclick="accessProduct('trillion')">
+                    Activate Wealth
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-premium-icon">🧠</div>
+                <h3 class="product-name">Consciousness Upload</h3>
+                <p class="product-desc">
+                    Transfer your consciousness to the cloud for true digital immortality.
+                </p>
+                <div class="product-price">$10,000,000</div>
+                <button class="product-cta" onclick="accessProduct('consciousness')">
+                    Upload Mind
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-premium-icon">⏰</div>
+                <h3 class="product-name">Time Machine Pro</h3>
+                <p class="product-desc">
+                    Actual time travel technology using quantum entanglement and AI navigation.
+                </p>
+                <div class="product-price">$50,000,000</div>
+                <button class="product-cta" onclick="accessProduct('time')">
+                    Travel Time
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-premium-icon">🌍</div>
+                <h3 class="product-name">Reality Controller</h3>
+                <p class="product-desc">
+                    Manipulate reality itself through advanced quantum field manipulation.
+                </p>
+                <div class="product-price">$100,000,000</div>
+                <button class="product-cta" onclick="accessProduct('reality')">
+                    Control Reality
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-premium-icon">👑</div>
+                <h3 class="product-name">God Mode Ultimate</h3>
+                <p class="product-desc">
+                    Achieve omnipotence through complete universal system access.
+                </p>
+                <div class="product-price">$1,000,000,000</div>
+                <button class="product-cta" onclick="accessProduct('god')">
+                    Become Divine
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="section-header">
+            <h2 class="section-title">Exclusive Payment Options</h2>
+            <p class="section-subtitle">Multiple ways to join the elite</p>
+        </div>
+        
+        <div class="payment-methods">
+            <div class="payment-card" onclick="selectPayment('crypto')">
+                <div class="payment-icon">₿</div>
+                <h3 class="payment-name">Cryptocurrency</h3>
+                <p class="payment-desc">Bitcoin, Ethereum, Stablecoins</p>
+            </div>
+            
+            <div class="payment-card" onclick="selectPayment('wire')">
+                <div class="payment-icon">🏦</div>
+                <h3 class="payment-name">Wire Transfer</h3>
+                <p class="payment-desc">Swiss & Offshore Banking</p>
+            </div>
+            
+            <div class="payment-card" onclick="selectPayment('paypal')">
+                <div class="payment-icon">💳</div>
+                <h3 class="payment-name">PayPal Premium</h3>
+                <p class="payment-desc">Instant Global Payments</p>
+            </div>
+            
+            <div class="payment-card" onclick="selectPayment('amex')">
+                <div class="payment-icon">💎</div>
+                <h3 class="payment-name">AMEX Centurion</h3>
+                <p class="payment-desc">Black Card Exclusive</p>
+            </div>
+            
+            <div class="payment-card" onclick="selectPayment('art')">
+                <div class="payment-icon">🎨</div>
+                <h3 class="payment-name">Asset Transfer</h3>
+                <p class="payment-desc">Art, Gold, Real Estate</p>
+            </div>
+            
+            <div class="payment-card" onclick="selectPayment('custom')">
+                <div class="payment-icon">🤝</div>
+                <h3 class="payment-name">Custom Terms</h3>
+                <p class="payment-desc">Negotiate Your Terms</p>
+            </div>
+        </div>
+        
+        <!-- Payment Details Sections -->
+        <div class="payment-details" id="crypto-details">
+            <h3 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 30px; color: gold;">
+                Cryptocurrency Payment
+            </h3>
+            <div style="background: rgba(255,215,0,0.1); padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                <p style="margin-bottom: 20px;"><strong>Bitcoin Address:</strong></p>
+                <code style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 10px; display: block; word-break: break-all;">
+                    bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+                </code>
+            </div>
+            <div style="background: rgba(255,215,0,0.1); padding: 30px; border-radius: 15px;">
+                <p style="margin-bottom: 20px;"><strong>Ethereum Address:</strong></p>
+                <code style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 10px; display: block; word-break: break-all;">
+                    0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+                </code>
+            </div>
+            <p style="text-align: center; margin-top: 30px; color: var(--champagne);">
+                Send exact amount and email confirmation to: vip@omnios.luxury
+            </p>
+        </div>
+        
+        <div class="payment-details" id="wire-details">
+            <h3 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 30px; color: gold;">
+                Wire Transfer Instructions
+            </h3>
+            <div style="background: rgba(255,215,0,0.1); padding: 30px; border-radius: 15px;">
+                <p><strong>Bank:</strong> Swiss Private Bank</p>
+                <p><strong>Account Name:</strong> OMNIOS LUXURY LIMITED</p>
+                <p><strong>IBAN:</strong> CH93 0076 2011 6238 5295 7</p>
+                <p><strong>SWIFT:</strong> UBSWCHZH80A</p>
+                <p><strong>Reference:</strong> MEMBERSHIP-<span id="membershipType">DIAMOND</span></p>
+            </div>
+        </div>
+        
+        <div class="payment-details" id="paypal-details">
+            <h3 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 30px; color: gold;">
+                PayPal Premium Payment
+            </h3>
+            <div id="paypal-button-container" style="max-width: 500px; margin: 0 auto;"></div>
+        </div>
+    </section>
+    
+    <!-- Google AdSense Luxury Container 3 -->
+    <div class="adsense-luxury">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+             data-ad-slot="3456789012"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <h2 class="section-title">Elite Member Testimonials</h2>
+            <p class="section-subtitle">Hear from the world's most successful individuals</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "OMNIOS transformed my $100M net worth into $10B in just 6 months. 
+                    The Quantum AI alone is worth the Diamond membership."
+                </p>
+                <div class="testimonial
